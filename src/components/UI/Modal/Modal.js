@@ -10,7 +10,7 @@ class Modal extends Component {
     //funkcija koja sluzi da se ne bi renderovao racun prilikom svakog dodavanja necega u burger, za skolske projekte moze i bez toga
     //poboljsava performanse valjda, ali ako bismo koristili Modal vise puta u aplikaciji verovatno bi morali konfigurisati funkciju
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        return nextProps.show !== this.props.show
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
 
     componentWillUpdate(nextProps, nextState, nextContext) {
