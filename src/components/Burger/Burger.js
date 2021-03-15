@@ -1,4 +1,5 @@
 import React from "react";
+import {withRouter} from 'react-router-dom';
 import classes from './Burger.css';
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 
@@ -25,4 +26,6 @@ const burger = (props) => {
     );
 }
 
-export default burger;
+//withRouter je specijalna hoc koja nam dodaje match, location i history od njegove visse komponente (BurgerBuilder)
+//da bismo pristupili nekim podacima od BurgerBuildera
+export default withRouter(burger);
